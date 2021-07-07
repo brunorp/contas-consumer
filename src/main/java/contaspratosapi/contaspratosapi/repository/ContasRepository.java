@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ContasRepository extends JpaRepository<Conta, Integer> {
-    @Query("SELECT c FROM Conta c ORDER BY valor DESC")
-    Conta findByHighestValue(PageRequest pageable);
+    @Query("SELECT c FROM Conta c ORDER BY data DESC")
+    Conta findByHighestDate(PageRequest pageable);
 }
